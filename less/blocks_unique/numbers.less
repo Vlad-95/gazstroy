@@ -1,0 +1,33 @@
+.numbers {
+    background-image: url('../img/numbers-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 136px 0 44px;
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        color: @white;
+        width: calc(50% - 156px);
+        margin: 0 78px 80px;
+
+        span {
+            font-size: 80px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        p {
+           font-size: 15px;
+           font-weight: 400; 
+           margin: 0;
+           padding: 5px 0 0 23px;
+           line-height: 1.4;
+        }
+    }
+}

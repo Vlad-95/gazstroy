@@ -1,0 +1,19 @@
+.partners {
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: calc(100% / 6);
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #bfdbed;
+        
+        &:nth-of-type(6n) {
+            border-right: none;
+        }
+    }
+}

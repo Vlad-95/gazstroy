@@ -1,0 +1,34 @@
+.form {
+    border-top: 1px solid #bfdbed;
+    border-bottom: 1px solid #bfdbed;
+    padding: 47px 0;
+
+    &__row {
+        display: flex;
+    }   
+
+    .left {
+        width: 370px;
+    }
+
+    .right {
+        width: calc(100% - 370px);
+        padding-left: 30px;
+    }
+
+    &__item {
+
+        .name {
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0;
+        }
+        
+        .input,
+        .textarea {
+            width: 100%;
+            outline: none;
+            border: 1px solid #bfdbed;
+        }
+    }
+}

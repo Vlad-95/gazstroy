@@ -1,0 +1,59 @@
+.advantages-main {
+    padding: 58px 0 40px;
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    &__item {
+        width: calc((100% / 3) - 30px);
+        margin: 0 15px 30px;
+        position: relative;
+
+        &:hover {
+            .image {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .image {
+            height: 210px;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 0.3s;
+                transform: scale(1);
+            }
+        }
+
+        .name {
+            position: absolute;
+            left: 24px;
+            bottom: 24px;
+            color: @white;
+            font-weight: 900;
+            font-size: 17px;
+            margin: 0;
+            padding-right: 70px;
+        }
+
+        .icon {
+            position: absolute;
+            right: 19px;
+            bottom: 18px;
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: @white;
+            }
+        }
+    }
+}
