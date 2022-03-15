@@ -1,0 +1,56 @@
+.about-main {
+    padding: 88px 0 102px;
+
+    &__wrap {
+        display: flex;
+    }
+
+    .block-title {
+        font-weight: 900;
+        font-size: 20px;
+        margin: 0 0 24px;
+
+        span {
+            color: @blue;
+        }
+    }
+ 
+    .wysiwyg {
+        width: 70%;
+        padding-right: 22px;
+
+        p {
+            font-size: 17px;
+            line-height: 1.78;
+        }
+
+        a {
+            color: @blue;
+            font-size: 14px;
+            font-weight: 900;
+
+            svg {
+                display: inline-block;
+                vertical-align: middle;
+                width: 20px;
+                height: 14px;
+                fill: @blue;
+                margin-left: 11px;
+                transition: 0.3s;
+                transform: translateX(0);
+            }
+
+            &:hover {
+                svg {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+
+    .image {
+        width: 30%;
+        text-align: right;
+        padding-right: 40px;
+    }
+}

@@ -1,7 +1,6 @@
 .form {
     border-top: 1px solid #bfdbed;
-    border-bottom: 1px solid #bfdbed;
-    padding: 47px 0;
+    padding: 47px 0 0;
 
     &__row {
         display: flex;
@@ -17,11 +16,13 @@
     }
 
     &__item {
+        display: block;
+        margin-bottom: 18px;
 
         .name {
             font-size: 14px;
             font-weight: 400;
-            margin: 0;
+            margin: 0 0 5px;
         }
         
         .input,
@@ -29,6 +30,110 @@
             width: 100%;
             outline: none;
             border: 1px solid #bfdbed;
+        }
+
+        .input {
+            height: 40px;
+            padding: 0 15px;
+        }
+
+        .textarea {
+            padding: 15px;
+            height: 120px;
+            resize: none;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #bfdbed;
+        margin-top: 28px;
+        padding-top: 21px;
+    }
+
+    &__agree {
+        position: relative;
+
+        input {
+            position: absolute;
+            opacity: 0;            
+
+            &:checked + .text:after {
+                opacity: 1;
+            }
+        }
+
+        .text {
+            position: relative;
+            font-size: 14px;
+            font-weight: 400;
+            color: @text;
+            padding-left: 46px;
+            margin: 0;
+
+            a {
+                text-decoration: underline;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border: 1px solid #dfe0e3;
+                top: -6px;
+                left: 0;
+                background-color: @white;
+            }
+
+            &:after {
+                content: url('../img/icons/check.svg');
+                position: absolute;
+                left: 6px;
+                top: 3px;
+                width: 19px;
+                height: 13px;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    &__submit {
+        font-size: 14px;
+        font-weight: 500;
+        background-color: @blue;
+        border: none;
+        outline: none;
+        color: @white;
+        width: 160px;
+        height: 50px;
+        position: relative;
+        text-align: left;
+        padding: 0 22px;
+
+        .icon {
+            width: 24px;
+            height: 14px;
+            fill: @white;
+            position: absolute;
+            right: 19px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transform: translateX(0);
+            transition: 0.3s;
+        }
+
+        &:hover {
+
+            .icon {
+                transform: translateX(5px);
+            }
+            
         }
     }
 }
