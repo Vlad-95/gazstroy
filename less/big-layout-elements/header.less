@@ -11,6 +11,27 @@
         .header__wrap {
             &:before {
                 background-color: fade(@black, 20%);
+                border: 1px solid fade(@white, 10%);
+            }
+        }
+
+        .logo {
+            border-right: 1px solid fade(@white, 10%);
+        }
+
+        .phone {
+            color: @white;
+        }
+
+        .icons {
+            a {
+                background-color: fade(@white, 10%);
+            }
+        }
+
+        .contacts {
+            &:after {
+                background-color: fade(@white, 10%);
             }
         }
 
@@ -24,7 +45,7 @@
         flex-wrap: wrap;
         align-items: flex-start;
         position: relative;
-        
+        //e8e8e8
 
         &:before {
             content: '';
@@ -33,7 +54,8 @@
             top: 0;
             width: calc(100% + 78px);
             height: 100%;
-            border: 1px solid fade(@white, 10%);
+            border: 1px solid #e8e8e8;
+            border-top: none;
             background-color: @white;
             pointer-events: none;
             z-index: -1;
@@ -41,7 +63,7 @@
     }
     
     .logo {
-        border-right: 1px solid fade(@white, 10%);
+        border-right: 1px solid #e8e8e8;
         width: 201px;
         height: 141px;
         line-height: 202px;
@@ -71,14 +93,14 @@
             bottom: 0;
             width: calc(100% + 39px);
             height: 1px;
-            background-color: fade(@white, 10%);
+            background-color: #e8e8e8;
         }
     }
 
     .phone {
         font-weight: 500;
         font-size: 14px;
-        color: @white;
+        color: @text;
     }
 
     .icons {
@@ -87,7 +109,7 @@
         align-items: center;
 
         a {
-            background-color: fade(@white, 10%);
+            background-color: @blue;
             width: 30px;
             height: 30px;
             border-radius: 100px;
