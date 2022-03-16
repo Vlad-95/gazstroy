@@ -1,44 +1,4 @@
 .header {
-    
-    &_absolute {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        z-index: 2;
-
-        
-        .header__wrap {
-            &:before {
-                background-color: fade(@black, 20%);
-                border: 1px solid fade(@white, 10%);
-            }
-        }
-
-        .logo {
-            border-right: 1px solid fade(@white, 10%);
-        }
-
-        .phone {
-            color: @white;
-        }
-
-        .icons {
-            a {
-                background-color: fade(@white, 10%);
-            }
-        }
-
-        .contacts {
-            &:after {
-                background-color: fade(@white, 10%);
-            }
-        }
-
-        .menu {
-            color: @white;
-        }
-    }
 
     &__wrap {
         display: flex;
@@ -214,6 +174,46 @@
                     margin-bottom: 10px;
                 }
             }
+        }
+    }
+
+    &_absolute {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+
+        
+        .header__wrap {
+            &:before {
+                background-color: fade(@black, 20%);
+                border: 1px solid fade(@white, 10%);
+            }
+        }
+
+        .logo {
+            border-right: 1px solid fade(@white, 10%);
+        }
+
+        .phone {
+            color: @white;
+        }
+
+        .icons {
+            a {
+                background-color: fade(@white, 10%);
+            }
+        }
+
+        .contacts {
+            &:after {
+                background-color: fade(@white, 10%);
+            }
+        }
+
+        .menu {
+            color: @white;
         }
     }
 

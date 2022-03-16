@@ -62,4 +62,17 @@ $(document).ready(function() {
             arrows: false
         })
     }
+
+    //Компетенции - выравнивание текста
+    if (document.querySelector('.competence')) {
+        console.log(1)
+        const competenceItem = document.querySelectorAll('.competence__item');
+
+        competenceItem.forEach(item => {
+            if (!item.querySelector('.wysiwyg ul')) {
+                item.classList.add('align-center');
+            }
+            
+        })
+    }
 });
