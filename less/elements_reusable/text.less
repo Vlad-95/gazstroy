@@ -1,0 +1,24 @@
+.text {
+    p {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.8;
+    }
+
+    &.with-line {
+        position: relative;
+        padding-left: 90px;
+        max-width: 1035px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 50px;
+            height: 4px;
+            background-color: @blue;
+            border-radius: 100px;
+        }
+    }
+}
