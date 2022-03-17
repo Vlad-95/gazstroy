@@ -7,6 +7,19 @@
 
     .image {
         margin: 0 0 49px;
+        position: relative;
+
+        &:after {
+            content: attr(data-status);
+            position: absolute;
+            right: -2px;
+            top: 40px;
+            color: @white;
+            background-color: @blue;
+            font-size: 14px;
+            font-weight: 900;
+            padding: 13px 17px;
+        }
 
         img {
             display: block;
