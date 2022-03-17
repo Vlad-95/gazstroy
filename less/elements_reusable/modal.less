@@ -1,0 +1,108 @@
+.modal {
+    background-color: fade(@blue, 90%);      
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 60px 15px;
+    overflow: auto;
+    display: none;
+
+    .close {
+        position: absolute;
+        right: 27px;
+        top: 27px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: @blue;
+            width: 100%;
+            height: 2px;
+
+            &:first-of-type {
+                transform: rotate(45deg);
+            }
+
+            &:last-of-type {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__wrap {
+        max-width: 1070px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: @white;
+        position: relative;
+        padding: 92px 100px;
+    }
+
+    &__content {
+
+    }
+
+    .text {
+        .name {
+            font-size: 25px;
+            font-weight: 900;
+            margin: 0 0 9px;
+        }
+
+        .position {
+            margin: 0;
+            font-size: 17px;
+            font-weight: 900;
+        }
+
+        .wysiwyg {
+            margin: 49px 0;
+
+            p {
+                line-height: 1.8;
+                font-size: 17px;
+                margin: 49px 0 23px;
+                
+                strong {
+                    font-weight: 900;
+                }
+            }
+
+            ul {
+                padding: 0;
+                list-style: none;
+                font-size: 17px;
+
+                li {
+                    position: relative;
+                    padding-left: 20px;
+                    line-height: 1.7;
+
+                    &:not(:last-child) {
+                        margin-bottom: 11px;
+                    }
+                    
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 6px;
+                        width: 6px;
+                        height: 6px;
+                        background-color: @blue;
+                        border-radius: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
