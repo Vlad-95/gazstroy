@@ -1,0 +1,91 @@
+.projects-one {
+    padding: 46px 0 80px;
+
+    .page-title {
+        margin: 0 0 32px;
+    }
+
+    .image {
+        margin: 0 0 49px;
+
+        img {
+            display: block;
+        }
+    }
+
+    .info {
+        padding: 0 17px;
+        margin-bottom: 42px;
+
+        &__item {
+            font-size: 20px;
+            font-weight: 800;
+            position: relative;
+            padding-left: 73px;
+
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+
+            svg {
+                position: absolute;
+                left: 0;
+                top: -4px;
+                fill: @blue;
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    .reviews {
+        background-color: #e5f0f8;
+        padding: 72px 0 77px;
+        margin-top: 76px;
+
+        .wysiwyg {
+            padding: 0 90px;
+            position: relative;
+
+            &:before {
+                content: '“';
+                position: absolute;
+                left: 13px;
+                top: -4px;
+                font-size: 80px;
+                font-weight: 800;
+                color: @blue;
+            }
+
+            p {
+                font-size: 17px;
+                line-height: 1.75;
+                margin: 30px 0;
+            }
+
+            .name {
+                font-weight: 800;
+                font-size: 15px;
+                margin-top: 36px;
+            }
+        }
+    }
+
+    .gallery {
+        padding: 91px 0 0;
+
+        &__wrap {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+
+        &__item {
+            margin: 0 10px 20px;
+
+            img {
+                display: block;
+            }
+        }
+    }
+}
