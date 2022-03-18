@@ -359,15 +359,63 @@
     // }
 }
 
+@media screen and (max-width: 1270px) {
+    .header {
+        &__wrap {
+            &:before {
+                display: none;
+            }
+        }
+
+        &_absolute {
+            background-color: fade(@black, 20%);
+            border-bottom: 1px solid fade(@white, 10%);
+        }
+    }
+}
+
+
 @media screen and (max-width: 1200px) {
     .header {
-        
+        .contacts {
+            padding: 18px 0 22px 25px;
+        }
+        .menu {
+            font-size: 12px;
+
+            &__item {
+                margin: 0 7px;
+
+                &:first-of-type {
+                    margin-left: 0;
+                    
+                    & > a {
+                        padding-left: 25px;
+                    }
+                }
+    
+                &:last-of-type {
+                    margin-right: 0;
+                    
+                    & > a {
+                        padding-right: 0;
+                    }
+                }
+    
+                & > a {
+                    padding: 29px 8px 26px;
+                    display: inline-block;
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: 992px) {
     .header {
-        
+        .nav {
+            display: none;
+        }
 
         // .burger {
         //     display: block;
