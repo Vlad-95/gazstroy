@@ -65,7 +65,6 @@ $(document).ready(function() {
 
     //Компетенции - выравнивание текста
     if (document.querySelector('.competence')) {
-        console.log(1)
         const competenceItem = document.querySelectorAll('.competence__item');
 
         competenceItem.forEach(item => {
@@ -74,5 +73,56 @@ $(document).ready(function() {
             }
             
         })
+    }
+
+    //Техническое оснащение - покраска элементов таблицы
+    if (document.querySelector('.equipment .table')) {
+        const tableItem = document.querySelectorAll('.table__item');
+        const tableItemName = document.querySelectorAll('.name');
+        const tableItemLi = document.querySelectorAll('li p');
+        const arr = [];
+        const colors = ['#e5f0f8', '#f0f6fb'];
+
+        tableItem.forEach(elem => {
+            const name = elem.querySelector('.name').textContent;
+            const li = elem.querySelectorAll('li p');
+
+            arr.push({name})
+
+            li.forEach(elem => {
+                arr.push({name: elem.textContent})
+            })           
+        })
+
+        let colorsArr = arr.map((elem, i) => {
+            if (i % 2 == 0) {
+                return {...elem, color: colors[0]}
+            } else {
+                return {...elem, color: colors[1]}
+            }
+        })
+
+        addColor = (elems, typeElems) => {
+            if (typeElems == 'titles') {
+                elems.forEach(elem => {
+                    colorsArr.find(item => {
+                        if (item.name == elem.textContent) {
+                            elem.style.backgroundColor = item.color; 
+                        }
+                    })
+                })
+            } else {
+                elems.forEach(elem => {
+                    colorsArr.find(item => {
+                        if (item.name == elem.textContent) {
+                            elem.parentElement.style.backgroundColor = item.color; 
+                        }
+                    })
+                })
+            }            
+        }
+
+        addColor(tableItemName, 'titles');
+        addColor(tableItemLi, 'li');
     }
 });

@@ -1,0 +1,111 @@
+.equipment {
+    padding: 45px 0;
+
+    .image {
+        margin-bottom: 48px;
+    }
+
+    .text {
+        margin-bottom: 57px;
+    }
+
+    .numbers {
+        background: none;
+        padding: 92px 0 39px;
+
+        &__wrap {
+            margin: 0 -15px;
+        }
+
+        .block-title {
+            font-size: 25px;
+            font-weight: 900;
+            margin: 0 0 53px;
+        }
+
+        &__item {
+            display: block;
+            width: calc((100% / 6) - 30px);
+            margin: 0 15px 69px;
+            text-align: center;
+
+            span {
+                color: @blue;
+                font-size: 70px;
+                font-weight: 900;
+            }
+
+            p {
+                color: @text;
+                margin: 0;
+                font-weight: 800;
+                font-size: 15px;
+                padding: 0 25px;
+            }
+        }
+    }
+
+    .table {
+        border-top: 1px solid #bfdbed;
+        border-bottom: 1px solid #bfdbed;
+        background-color: #f7fafd;
+        padding: 71px 0 83px;
+        counter-reset: item;
+
+        .block-title {
+            font-size: 25px;
+            font-weight: 900;
+            margin: 0 0 44px;
+        }
+
+        &__item {
+            .name {
+                margin: 0;
+                padding: 15px 20px 18px;
+                font-size: 17px;
+                font-weight: 900;
+                background-color: #e5f0f8;
+            }
+
+            ol {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 17px;
+
+                li {
+                    padding: 14px 20px 15px 60px;
+                    position: relative;
+                    counter-increment: item;
+                    background-color: #f0f6fb;
+
+                    &:before {
+                        content: counter(item)".";
+                        position: absolute;
+                        left: 20px;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+
+                    span {
+                        position: absolute;
+                        right: 31px;
+                        top: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .partners {
+        padding: 91px 0 55px;
+
+        .block-title {
+            font-size: 25px;
+            font-weight: 900;
+            margin: 0 0 55px;
+        }
+    }
+}
