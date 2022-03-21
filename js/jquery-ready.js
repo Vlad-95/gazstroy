@@ -137,4 +137,23 @@ $(document).ready(function() {
         addColor(tableItemName, 'titles');
         addColor(tableItemLi, 'li');
     }
+
+    //Открытие/Закрытие модалок
+    if (document.querySelector('.modal')) {
+        let link = document.querySelectorAll('.js-open-modal');
+        let modalClose = document.querySelector('.modal .close')
+
+        link.forEach(item => {
+            const modalSrc = item.getAttribute('data-modal');
+
+            item.addEventListener('click', () => {
+                $(`.modal#${modalSrc}`).fadeIn();
+            })
+        });
+
+        modalClose.addEventListener('click', () => {
+            $('.modal').fadeOut();
+        })
+
+    }
 });
