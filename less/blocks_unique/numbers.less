@@ -31,3 +31,50 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .numbers {
+        padding: 90px 0 44px;
+
+        &__item {
+            margin: 0 40px 50px;
+            width: calc(50% - 80px);
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .numbers {
+        &__item {
+            span {
+                font-size: 60px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .numbers {
+        &__item {
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+                padding: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .numbers {
+        &__item {
+            width: calc(100% - 80px);
+        }
+    }
+}
