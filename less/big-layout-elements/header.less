@@ -217,72 +217,70 @@
         }
     }
 
-    // .burger {
-    //     position: relative;
-    //     display: none;
-    //     right: 0;
-    //     top: 0;
-    //     width: 30px;
-    //     height: 21px;
-    //     z-index: 6;
-    //     border-radius: 100px;
+    .burger {
+        position: absolute;
+        display: none;
+        right: 0;
+        bottom: 27px;
+        width: 30px;
+        height: 21px;
+        z-index: 6;
+        border-radius: 100px;
 
-    //     &:before {
-    //         content: '';
-    //         position: absolute;
-    //         box-shadow: 0 0 0 0 @dark;
-    //         transition: 1s;
-    //         width: 2px;
-    //         height: 2px;
-    //         top: 0;
-    //         bottom: 0;
-    //         right: 0;
-    //         left: 0;
-    //         margin: auto;
-    //         display: block;
-    //     }
+        &:before {
+            content: '';
+            position: absolute;
+            box-shadow: 0 0 0 0 @dark;
+            transition: 1s;
+            width: 2px;
+            height: 2px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            display: block;
+        }
 
-    //     &.active {
-    //         &:before {
-    //             box-shadow: 0 0 0 5000px @dark;
-    //         }
+        &.active {
+            &:before {
+                box-shadow: 0 0 0 5000px @dark;
+            }
 
-    //         span {
-    //             display: none;
-    //         }
+            span {
+                display: none;
+            }
 
-    //         svg {
-    //             display: block;
-    //         }
-    //     }
+            svg {
+                display: block;
+            }
+        }
 
-    //     span {
-    //         position: absolute;
-    //         left: 0;
-    //         top: 0;
-    //         bottom: 0;
-    //         right: 0;
-    //         margin: auto;
-    //         width: 100%;
-    //         height: 3px;
-    //         background-color: @dark;
-    //         display: block;
-    //         border-radius: 100px;
-    //         transition: 0.5s;
-    //         transform: rotate(0);
-    //         opacity: 1;
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 3px;
+            background-color: @white;
+            display: block;
+            border-radius: 100px;
+            transition: 0.5s;
+            transform: rotate(0);
+            opacity: 1;
 
-    //         &:nth-of-type(1) {
-    //             bottom: auto;
-    //         }
+            &:nth-of-type(1) {
+                bottom: auto;
+            }
 
-    //         &:nth-of-type(3) {
-    //             top: auto;
-    //         }
-    //     }
-
-       
-    // }
+            &:nth-of-type(3) {
+                top: auto;
+            }
+        }
+    }
 
     // .mobile-menu {
     //     position: fixed;
@@ -417,14 +415,38 @@
             display: none;
         }
 
-        // .burger {
-        //     display: block;
-        // }
+        .burger {
+            display: block;
+        }
     }
 }
 
 @media screen and (max-width: 576px) {
     .header {
-        
+        .logo {
+            width: 135px;
+
+            svg {
+                width: 120px;
+                height: 71px;
+            }
+        }
+
+        &__row {
+            width: calc(100% - 135px);
+        }
+
+        .contacts {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .phone {
+            margin-bottom: 5px;
+        }
+
+        .burger {
+            bottom: 16px;
+        }
     }
 }
