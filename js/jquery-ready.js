@@ -20,11 +20,6 @@ $(document).ready(function() {
         $(mobileMenuDropItem).click(function() {
             $(this).toggleClass('active').find('.sub').slideToggle();
         })
-        // mobileMenuDropItem.forEach(item => {
-        //     item.addEventListener('click', () => {
-        //         item.classList.toggle('active')
-        //     })
-        // })
     }
 
     function toggleMenu() {

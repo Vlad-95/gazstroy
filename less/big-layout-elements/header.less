@@ -133,7 +133,7 @@
                         top: 33px;
                         width: 9px;
                         height: 6px;
-                        background-image: url('../img/icons/arrow_dd.png');
+                        background-image: url('../img/icons/arrow_dd-black.png');
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -227,6 +227,17 @@
 
         .menu {
             color: @white;
+
+            &__item {    
+                &_drop {    
+                    & > a {
+                        &:after {
+                            background-image: url('../img/icons/arrow_dd.png');
+                        }
+                    }
+                }
+            }
+
         }
 
         .burger {
