@@ -84,3 +84,41 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .projects-main {
+        .window {
+            &:before {
+                display: none;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .projects-main {
+        .slider {
+            &__item {
+                .image {
+                    height: 350px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .projects-main {
+        .slider {
+            &__item {
+                .image {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
