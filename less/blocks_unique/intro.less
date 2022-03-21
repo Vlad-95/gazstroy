@@ -1,4 +1,6 @@
 .intro {
+    position: relative;
+
     .slider {
         &__item {
             position: relative;
@@ -32,6 +34,48 @@
                     line-height: 1.8;
                 }
             }
+        }
+    }
+
+    .arrows {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        &__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &__item {
+            margin: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                svg {
+                    transform: scaleX(2);
+                }
+            }
+
+            svg {
+                width: 16px;
+                height: 16px;
+                fill: @white;
+                transition: 0.3s;
+                transform-origin: 100% 50%;
+            }
+
+            &.prev {
+                transform: rotate(180deg);
+            }
+
+
         }
     }
 }
