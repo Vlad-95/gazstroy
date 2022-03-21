@@ -1,49 +1,40 @@
 $(document).ready(function() {
     //===========Мобильное меню
-    // let body = $('body')
-    // let windowWidth = window.innerWidth;
-    // let header = $('.header');
-    // let headerWrap = $('.header__wrap');
-    // let time = header.find('.nav__item.time');
-    // let mail = header.find('.nav__item.mail');
-    // let address = header.find('.nav__item.address');
-    // let phone = header.find('.nav__item.phone')
-    // let burger = $('.burger');
-    // let windowHeight = $(window).height();
+    const body = document.querySelector('body')
+    const windowWidth = window.innerWidth;
+    const nav = document.querySelector('.header .nav .menu');
+    const burger = document.querySelector('.burger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuWrap = mobileMenu.querySelector('.mobile-menu__wrap');
+    const mobileMenuClose = document.querySelector('.mobile-menu .close');
 
-    // if (windowWidth <= 992) {
-    //     //создаем контейнер для менюшки
-    //     let mobileMenu = $(document.createElement('div'));
-    //     let nav = $(document.createElement('div'));
-    //     mobileMenu.addClass('mobile-menu');
-    //     nav.addClass('nav');
-
-    //     headerWrap.append(mobileMenu)
-    //     mobileMenu.append(nav)
-
-    //     //клонируем элементы хедера
-    //     let mobileTime = time.clone();
-    //     let mobileMail = mail.clone();
-    //     let mobileAddress = address.clone();
-    //     let mobilePhone = phone.clone();
+    if (windowWidth <= 992) {
+        //клонируем элементы хедера
+        const mobileNav = nav.cloneNode(true);
         
-    //     nav.append(mobilePhone); 
-    //     nav.append(mobileMail);  
-    //     nav.append(mobileAddress);  
-    //     nav.append(mobileTime);   
-              
-    // }
+        mobileMenuWrap.append(mobileNav);
 
-    // function showMenu() {
-    //     let mobileMenu = $('.mobile-menu');
+        //Открытие-скрытие подменю
+        const mobileMenuDropItem = mobileNav.querySelectorAll('.menu__item.menu__item_drop');
 
-    //     burger.toggleClass('active');
-    //     body.toggleClass('no-scroll');
-    //     mobileMenu.toggleClass('active');
-    //     console.log(1)
-    // }
+        $(mobileMenuDropItem).click(function() {
+            $(this).toggleClass('active').find('.sub').slideToggle();
+        })
+        // mobileMenuDropItem.forEach(item => {
+        //     item.addEventListener('click', () => {
+        //         item.classList.toggle('active')
+        //     })
+        // })
+    }
 
-    // burger.click(showMenu);
+    function toggleMenu() {
+        burger.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+        mobileMenu.classList.toggle('active');
+    }
+
+    burger.addEventListener('click', toggleMenu);
+    mobileMenuClose.addEventListener('click', toggleMenu);
 
     //============Мобильное меню (КОНЕЦ)
 
