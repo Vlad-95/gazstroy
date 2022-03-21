@@ -61,6 +61,32 @@ $(document).ready(function() {
         })
     }
 
+    //Компетенции - подсветка активного элемента из LocalStorage
+    if (document.querySelector('.advantages-main__wrap')) {
+        document.querySelectorAll('.advantages-main__item').forEach(item => {
+            item.addEventListener('click', () => {
+                let name = item.querySelector('.name').textContent;
+                
+                localStorage.setItem('competence', name)
+            })
+        })
+    }
+    if (document.querySelector('.competence')) {
+        if (localStorage.getItem('competence')) {
+            document.querySelectorAll('.competence__item').forEach(item => {
+                item.classList.remove('active');
+                document.querySelector(`.competence__item[data-advantage="${localStorage.getItem('competence')}"]`).classList.add('active');
+
+                $('html, body').animate({
+                    scrollTop: $(`.competence__item[data-advantage="${localStorage.getItem('competence')}"]`).offset().top
+                })
+                
+            })
+        } else {
+            document.querySelector('.competence__item').classList.add('active');
+        }
+    }
+
     //Техническое оснащение - покраска элементов таблицы
     if (document.querySelector('.equipment .table')) {
         const tableItem = document.querySelectorAll('.table__item');
