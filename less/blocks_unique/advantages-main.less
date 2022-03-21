@@ -57,3 +57,30 @@
         }
     }
 }
+
+@media screen and (max-width: 992px) {
+    .advantages-main {
+        &__item {
+            .name {
+                font-size: 15px;
+                bottom: 21px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .advantages-main {
+        &__item {
+            width: calc((100% / 2) - 30px);
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .advantages-main {
+        &__item {
+            width: calc((100% / 1) - 30px);
+        }
+    }
+}
