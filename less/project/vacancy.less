@@ -126,3 +126,50 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .vacancy {
+        &__item {
+            .name {
+                font-size: 17px;
+            }
+
+            .salary {
+                font-size: 17px;
+                margin: 0 30px 0 auto;
+            }
+
+            .wysiwyg {    
+                p {
+                    font-size: 15px;
+                }
+
+                ul {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .vacancy {
+        &__item {
+            .row {
+                position: relative;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .salary {
+                margin: 10px 0 0;
+            }
+
+            .icon {
+                position: absolute;
+                right: 0;
+                top: 28px;
+            }
+        }
+    }
+}

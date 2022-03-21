@@ -109,7 +109,8 @@
 
         input {
             position: absolute;
-            opacity: 0;            
+            opacity: 0;        
+            width: 100%;    
         }
 
         .text {
@@ -214,6 +215,17 @@
 
         &__submit {
             margin-top: 30px;
+        }
+
+        &_vacancy {
+            .form__row {
+                margin: 0 -15px;
+    
+                .form__item {
+                    width: calc(100% - 30px);
+                    margin: 0 15px 18px;
+                }
+            }
         }
     }
 }
