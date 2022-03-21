@@ -12,6 +12,12 @@
             border-bottom: 1px dashed #bfdbed;
         }
 
+        &.active {
+            .icon {
+                transform: rotate(-90deg);
+            }
+        }
+
         .row {
             display: flex;
             align-items: center;
@@ -41,6 +47,7 @@
             align-items: center;
             justify-content: center;
             transform: rotate(90deg);
+            transition: 0.3s;
 
             svg {
                 fill: @blue;

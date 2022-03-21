@@ -142,18 +142,30 @@ $(document).ready(function() {
     if (document.querySelector('.modal')) {
         let link = document.querySelectorAll('.js-open-modal');
         let modalClose = document.querySelector('.modal .close')
-
+        
         link.forEach(item => {
             const modalSrc = item.getAttribute('data-modal');
 
             item.addEventListener('click', () => {
+                body.classList.add('no-scroll');
                 $(`.modal#${modalSrc}`).fadeIn();
             })
         });
 
         modalClose.addEventListener('click', () => {
+            body.classList.remove('no-scroll');
             $('.modal').fadeOut();
         })
+    }
 
+    //Вакансии аккордион
+    if (document.querySelector('.vacancy')) {
+        $('.js-accardion-toggle').click(function() {
+            $(this)
+                .closest('.vacancy__item').toggleClass('active')
+                .find('.content').slideToggle();
+
+            $('.js-accardion-toggle').not($(this)).closest('.vacancy__item').removeClass('active').find('.content').slideUp()
+        })
     }
 });
