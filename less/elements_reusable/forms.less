@@ -4,6 +4,7 @@
 
     &__row {
         display: flex;
+        flex-wrap: wrap;
     }   
 
     .left {
@@ -181,6 +182,51 @@
 
         .form__file {
             margin: 19px 0 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .form {
+        .left {
+            width: 280px;
+        }
+    
+        .right {
+            width: calc(100% - 280px);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form {
+        .left {
+            width: 240px;
+        }
+    
+        .right {
+            width: calc(100% - 240px);
+        }
+
+        &__footer {
+            display: block;
+        }
+
+        &__submit {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .form {
+        .left {
+            width: 100%;
+        }
+
+        .right {
+            width: 100%;
+            padding-left: 0;
         }
     }
 }
