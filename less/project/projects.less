@@ -32,3 +32,29 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .projects {
+        &__item {
+            .name {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .projects {
+        &__item {
+            width: calc((100% / 2) - 30px);
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .projects {
+        &__item {
+            width: calc((100% / 1) - 30px);
+        }
+    }
+}
