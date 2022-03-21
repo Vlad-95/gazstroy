@@ -19,7 +19,8 @@
 
         .image {
             height: 250px;
-            width: 176px;
+            max-width: 176px;
+            width: 100%;
             margin: 0 auto 27px;
             display: flex;
             align-items: center;
@@ -44,5 +45,37 @@
             line-height: 1.5;
         }
 
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .docs {
+        &__item {
+            padding: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .docs {
+        &__item {
+            width: calc((100% / 3) - 30px);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .docs {
+        &__item {
+            width: calc(50% - 30px);
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .docs {
+        &__item {
+            width: calc(100% - 30px);
+        }
     }
 }
