@@ -14,6 +14,11 @@
 
         &:hover {
             .image {
+
+                &:after {
+                    opacity: 0;
+                }
+                
                 img {
                     transform: scale(1.05);
                 }
@@ -23,6 +28,23 @@
         .image {
             height: 210px;
             overflow: hidden;
+            position: relative;
+            background-color: #31a2e7;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                //background: linear-gradient(0deg,#030917 10%,#003176 30%,#31a1e7 70%,#31a1e7 100%);
+                transition: 0.3s;
+                z-index: 2;
+                opacity: 0.65;
+                // background-color: #030917;
+                // mix-blend-mode: lighten;
+            }
 
             img {
                 display: block;
@@ -31,6 +53,7 @@
                 object-fit: cover;
                 transition: 0.3s;
                 transform: scale(1);
+                mix-blend-mode: multiply;
             }
         }
 
@@ -42,13 +65,15 @@
             font-weight: 900;
             font-size: 17px;
             margin: 0;
-            padding-right: 70px;
+            padding-right: 70px;              
+            z-index: 3;
         }
 
         .icon {
             position: absolute;
             right: 19px;
             bottom: 18px;
+            z-index: 3;
             svg {
                 width: 24px;
                 height: 24px;
