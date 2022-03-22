@@ -71,6 +71,14 @@ $(document).ready(function() {
             dots: false,
             arrows: false
         })
+
+        $('.projects-main .arrows__item.prev').click(function() {
+            $('.projects-main .slider').slick('slickPrev')
+        });
+
+        $('.projects-main .arrows__item.next').click(function() {
+            $('.projects-main .slider').slick('slickNext')
+        });
     }
 
     //Компетенции - выравнивание текста
