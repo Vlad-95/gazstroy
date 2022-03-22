@@ -41,6 +41,8 @@ $(document).ready(function() {
         })
     }
 
+    //Главная - наведение на стрелки
+
     //Главная - проекты
     if ($('.projects-main .slider').length) {
         $('.projects-main .slider').slick({
