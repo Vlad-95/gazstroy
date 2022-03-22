@@ -36,8 +36,30 @@ $(document).ready(function() {
     //Главная - слайдер
     if ($('.intro .slider').length) {
         $('.intro .slider').slick({
-            dots: false,
-            arrows: false
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            pauseOnHover: false,
+            autoplaySpeed: 5000,
+            appendDots: $('.intro .dots .dots__wrap')
+        });
+
+        $('.intro .arrows__item.prev').click(function() {
+            $('.intro .slider').slick('slickPrev')
+        });
+
+        $('.intro .arrows__item.next').click(function() {
+            $('.intro .slider').slick('slickNext')
+        });
+
+        $('.intro .dots .pause').click(function() {
+            $(this).toggleClass('active');
+
+            if ($(this).hasClass('active')) {
+                $('.intro .slider').slick('slickPause')
+            } else {
+                $('.intro .slider').slick('slickPlay')
+            }
         })
     }
 

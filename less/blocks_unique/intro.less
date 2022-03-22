@@ -37,6 +37,103 @@
         }
     }
 
+    .dots {
+        bottom: 59px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: auto;
+        pointer-events: none;
+        
+
+        &__wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .pause {
+            width: 9px;
+            height: 13px;
+            order: 2;
+            position: relative;
+            margin-left: 20px;
+            pointer-events: all;
+            cursor: pointer;
+
+            &.active {
+                &:before,
+                &:after {
+                    background-color: @blue;
+                }
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 3px;
+                height: 100%;
+                background-color: @white;
+                border-radius: 100px;
+                transition: 0.3s;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 3px;
+                height: 100%;
+                background-color: @white;
+                border-radius: 100px;
+                transition: 0.3s;
+            }
+        }
+        
+        .slick-dots {
+            pointer-events: all;
+            order: 1;
+            width: auto;
+            bottom: 0;
+            text-align: left;
+            position: static;
+            display: inline-block;
+
+            li,
+            li button {
+                width: 30px;
+                height: 12px;
+            }
+
+            li {
+                button {
+                    padding: 0;
+                    background-color: @white;
+                    height: 2px;
+                    width: 30px;
+                    transform: scale(1);
+                    transition: 0.3s;
+                    border-radius: 100px;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        background-color: @blue;
+                        transform: scaleY(2);
+                    }
+                }
+            }
+        }
+    }
+
     .arrows {
         position: absolute;
         z-index: 2;
@@ -44,6 +141,7 @@
         left: 0;
         bottom: 91px;
         width: 100%;
+        pointer-events: none;
 
         &__wrap {
             position: relative;
@@ -55,6 +153,7 @@
             transition: 0.3s;
             position: absolute;
             cursor: pointer;
+            pointer-events: all;
 
             &:hover {
                 .line {
@@ -81,7 +180,7 @@
                         stroke-dasharray: 98px 0px;
                         transition: 0.3s;
                         transform: rotate(-137deg);
-                        transform-origin: 50% 48%;
+                        transform-origin: 50% 49%;
                     }
             }
 
@@ -151,6 +250,14 @@
                 }
             }
         }
+
+        .dots { 
+            bottom: 25px;
+        }
+
+        .arrows {
+            bottom: 58px;
+        }
     }
 }
 
@@ -178,6 +285,10 @@
                     }
                 }
             }
+        }
+
+        .dots { 
+            display: none;
         }
     }
 }
