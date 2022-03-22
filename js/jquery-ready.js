@@ -68,8 +68,9 @@ $(document).ready(function() {
     //Главная - проекты
     if ($('.projects-main .slider').length) {
         $('.projects-main .slider').slick({
-            dots: false,
-            arrows: false
+            dots: true,
+            arrows: false,
+            appendDots: $('.projects-main .slider-line')
         })
 
         $('.projects-main .arrows__item.prev').click(function() {
