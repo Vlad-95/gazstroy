@@ -65,42 +65,46 @@
             margin: 0 0 44px;
         }
 
-        &__item {
-            .name {
-                margin: 0;
-                padding: 15px 20px 18px;
-                font-size: 17px;
-                font-weight: 900;
-                background-color: #e5f0f8;
+        table {
+            width: 100%;
+            font-size: 17px;
+            counter-reset: item;
+
+            tr {
+                &:nth-of-type(odd) {
+                    background-color: #e5f0f8;
+                }
+
+                &:nth-of-type(even) {
+                    background-color: #f0f6fb;
+                }
             }
 
-            ol {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                font-size: 17px;
+            td {
+                padding: 15px 20px 18px;
 
-                li {
-                    padding: 14px 20px 15px 60px;
-                    position: relative;
-                    counter-increment: item;
-                    background-color: #f0f6fb;
+                &:not([colspan="2"]) {
+                    padding: 14px 31px 19px 60px;
 
-                    &:before {
-                        content: counter(item)".";
-                        position: absolute;
-                        left: 20px;
+                    &:first-of-type {
+                        position: relative;
+                        counter-increment: item;
+
+                        &:before {
+                            content: counter(item)".";
+                            position: absolute;
+                            left: 20px;
+                            top: 15px;
+                        }
                     }
+                }                
+                
+                strong {
+                    font-weight: 900;
+                }
 
-                    p {
-                        margin: 0;
-                    }
-
-                    span {
-                        position: absolute;
-                        right: 31px;
-                        top: 14px;
-                    }
+                &:nth-of-type(2) {
+                    text-align: right;
                 }
             }
         }
@@ -157,23 +161,22 @@
         }
         
         .table {
-            &__item {
-                ol {
-                    font-size: 15px;
 
-                    li {
-                        padding: 14px 15px 15px 40px;
+            table {
+                font-size: 15px;
 
-                        &:before {
-                            left: 15px;
-                        }
+                td {
+                    padding: 15px;
+    
+                    &:not([colspan="2"]) {
+                        padding: 15px 20px 15px 45px;
 
-                        p {
-                            font-size: 15px
-                        }
-
-                        span {
-                            right: 15px;
+                        &:first-of-type {
+                            
+                            &:before {
+                                left: 15px;
+                                top: 15px;
+                            }
                         }
                     }
                 }
